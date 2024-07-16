@@ -1,19 +1,18 @@
 Source: d3-format
 Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
 Uploaders: Ximin Luo <infinity0@debian.org>,
-           Xavier Guimard <yadd@debian.org>,
+           Yadd <yadd@debian.org>,
            Pirate Praveen <praveen@debian.org>
 Section: javascript
 Testsuite: autopkgtest-pkg-nodejs
 Priority: optional
-Build-Depends: debhelper-compat (= 12),
-               nodejs,
-               pkg-js-tools (>= 0.9.16~),
+Build-Depends: debhelper-compat (= 13),
+               dh-sequence-nodejs,
                rollup,
                node-rollup-plugin-terser,
                node-tape <!nocheck>,
                node-d3-queue <!nocheck>
-Standards-Version: 4.5.1
+Standards-Version: 4.6.2
 Vcs-Browser: https://salsa.debian.org/js-team/d3-format
 Vcs-Git: https://salsa.debian.org/js-team/d3-format.git
 Homepage: https://github.com/d3/d3-format
@@ -47,7 +46,6 @@ Package: node-d3-format
 Architecture: all
 Depends: ${misc:Depends},
          libjs-d3-format,
-         nodejs
 Multi-Arch: foreign
 Description: Formatting numbers for human consumption - NodeJS module
  Sometimes JavaScript doesn’t display numbers the way you expect. For example,

@@ -2,4 +2,7 @@
 # -*- makefile -*-
 
 %:
-	dh $@ --with nodejs
+	dh $@
+
+override_dh_missing:
+	dh_missing --list-missing
